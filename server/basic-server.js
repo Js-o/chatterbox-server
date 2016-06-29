@@ -15,12 +15,12 @@ var ip = '127.0.0.1';
 
 app.set(port);
 
-app.use('/static', express.static('public'));
+app.use('/static', express.static('client'));
 
 app.use(cors());
 app.use(bodyParser.json());
 
-app.get('/', handle.init);
+app.get('/', handle.init)
 
 app.get('/classes/messages', handle.get);
 
